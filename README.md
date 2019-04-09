@@ -1,10 +1,16 @@
 # aether
 
-github.com/IMTTHOLDINGCORP/go-aether is an [Ethereum-compatible](https://github.com/IMTTHOLDINGCORP/go-aether) project.
+github.com/IMTTHOLDINGCORP/go-aether is an [Ethereum-compatible](https://github.com/ethereum/go-ethereum) project.
 
 ## Warning
 
 We suggest that the GasPrice should not be less than 18Gwei, otherwise the transaction may not be packaged into the block.
+
+## List of Chain ID's:
+| Chain(s)    |  CHAIN_ID  | 
+| ----------  | :-----------:| 
+| testnet     | 1792            | 
+| mainnet     | 1913     | 
 
 ## Build the source 
 
@@ -133,33 +139,33 @@ that tell you there are two miners in the testnet.
 
 ## View the block mining history in console
 
-* tribe.getHistory(11,false)
+* tribe.getHistory(4)
     
 * then you will see the following message (console format):
 <pre><code>[{
-    🔨: "39708 -> 0x7B06dd132c089034157f1E1AAcda75787DF1e0c5"
+    difficulty: 3,
+    hash: "0xb54d1b36e324bfd0c0747edf93430a1b6c62d0a058fd7659eb97f51921e1f347",
+    number: 2198473,
+    signer: "0xf848f385fd21c6972264c777684940814a7d4792",
+    timestamp: 1554792114
 }, {
-    🔨: "39707 -> 0xc22D53456ABd14Da347517a4B47ea24866B8E3Ae"
+    difficulty: 3,
+    hash: "0x27f7fff0011929c879b25b4fb1529bad0d5ef50ec66f4cfcd454ccfaebb311eb",
+    number: 2198472,
+    signer: "0x4110bd1ff0b73fa12c259acf39c950277f266787",
+    timestamp: 1554792100
 }, {
-    🔨: "39706 -> 0xAd4c80164065a3c33dD2014908c7563eFf88Ab49"
+    difficulty: 3,
+    hash: "0x6bfd6aa2c5dbf67529058d600b375c88f24b53c2631e31ae754e24607b18dfdf",
+    number: 2198471,
+    signer: "0xad9581fe7f9b640cc34915cd988965216e44a972",
+    timestamp: 1554792086
 }, {
-    🔨: "39705 -> 0x3a5fBaC6CA913599C5fde8c1638dB58d01De8A48"
-}, {
-    🔨: "39704 -> 0x00aB501f3Fe4b2f71651764699EC5752598E679f"
+    difficulty: 3,
+    hash: "0x4fa3c0a910bf9378de8ab473ed27c955cb763c1315cbbf344c7ceb792046e029",
+    number: 2198470,
+    signer: "0xf848f385fd21c6972264c777684940814a7d4792",
+    timestamp: 1554792072
 }]</code></pre>
 
 that tell the block number and miner's account that generate that block.
-
-## get your own miner account
-
-    every node has it's own miner account, you can run getMiner() function to get that account:
-
-    > tribe.getMiner() 
-
-    then you will see below messages:
-    {
-        address: "0x00ab501f3fe4b2f71651764699ec5752598e679f",
-        balance: 2001223531052513000,
-        level: "Signer"
-    }
-    that will show your miner account and the balance of miner account in Wei unit.
