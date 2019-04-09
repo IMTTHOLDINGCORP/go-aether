@@ -1,6 +1,6 @@
-# aether
+# Aether
 
-github.com/IMTTHOLDINGCORP/go-aether is an [Ethereum-compatible](https://github.com/ethereum/go-ethereum) project.
+Aether is an [Ethereum-compatible](https://github.com/ethereum/go-ethereum) project.
 
 ## Warning
 
